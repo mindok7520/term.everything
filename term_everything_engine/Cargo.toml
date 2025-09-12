@@ -1,0 +1,9 @@
+[package]
+name = "term_everything_engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rust_interop = { path = "../rust_interop" }
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4", features = ["derive"] }
