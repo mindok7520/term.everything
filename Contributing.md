@@ -6,11 +6,6 @@ Want to change just a couple lines?
 The only dependency you need is `podman
 - [podman https://podman.io/docs/installation](https://podman.io/docs/installation) On ubuntu just use`sudo apt install podman`
 
-
-Then make sure you have downloaded the submodules
-```sh
-git submodule update --init --recursive
-```
 and run the distribute script
 ```sh
 ./distribute.sh
@@ -31,7 +26,7 @@ the dependencies
 - [meson https://mesonbuild.com/Getting-meson.html (but I don't recommend getting it from here)] (https://mesonbuild.com/Getting-meson.html) for building the cpp code. Make sure meson is on path, I recommend using the [uv python package manager https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/) then install meson with `uv tool install meson`
 - [Taskfile https://taskfile.dev/installation/](https://taskfile.dev/installation/) Installed by npm, or install globally for building and running the project, If you want to install globally and used uv in the last step, you can install it with ` uv tool install go-task-bin`
 - [ninja https://github.com/ninja-build/ninja/releases] (https://github.com/ninja-build/ninja/releases) as a build system used by meson
-- Pkg-config, gcc, and cmake with `sudo apt install pkg-config build-essential cmake` on ubuntu
+- Download the following dependecies from your system's package manager. On ubuntu use: `sudo apt install pkg-config build-essential cmake autoconf automake libtool libglib2.0-dev libfreetype-dev`
 - Optional: [vscode](https://code.visualstudio.com/) with these recommended extensions:
     - "mesonbuild.mesonbuild",
     - "ms-vscode.cpptools-extension-pack",

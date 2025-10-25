@@ -89,3 +89,47 @@ Show this help message.
 
 `--licenses`
 Print the open source licenses of libraries used in this app.
+
+`--reverse-scroll`
+Reverse scroll direction. It's great if you ssh into a linux machine from a mac.
+
+`--max-frame-rate`
+Limit drawing to the terminal to $N frames per second. Accepts float.
+
+`--debug-log`
+Log most debug statements to debug.log instead of printing to console
+
+# Environment Variables
+`TERM_EVERYTHING_PIXEL_MODE`
+Values:
+- ITERM2 
+- KITTY
+- SIXELS
+- SYMBOLS
+
+`TERM_EVERYTHING_CANVAS_MODE`
+Values:
+- TRUECOLOR
+- INDEXED_256
+- INDEXED_240
+- INDEXED_16
+- FGBG_BGFG
+- FGBG
+- INDEXED_8
+- INDEXED_16_8
+
+`TERM_EVERYTHING_PIXEL_TYPE`
+Values:
+- RGBA8
+- BGRA8
+- ARGB8
+- ABGR8
+- RGBA8_PREMULTIPLIED
+- BGRA8_PREMULTIPLIED
+- ARGB8_PREMULTIPLIED
+- ABGR8_PREMULTIPLIED
+
+`TERM_EVERYTHING_SYMBOLS`
+Values:
+see https://github.com/hpjansson/chafa/blob/b790c7e365f6a95aaa9cce985ff16a1c1f914482/chafa/chafa-symbol-map.h#L36
+Remove CHAFA_SYMBOL_TAG. For example: `CHAFA_SYMBOL_TAG_ALL` -> `ALL`

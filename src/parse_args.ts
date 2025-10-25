@@ -39,12 +39,22 @@ export const parse_args = async () => {
       version: {
         type: "boolean",
       },
+      ["debug-log"]: {
+        type: "boolean",
+      },
       help: {
         type: "boolean",
         short: "h",
       },
       licenses: {
         type: "boolean",
+      },
+      ["reverse-scroll"]: {
+        type: "boolean",
+        default: false,
+      },
+      ["max-frame-rate"]: {
+        type: "string",
       },
     },
     args: Bun.argv.slice(2),

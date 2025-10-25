@@ -52,11 +52,17 @@ tasks:
     silent: true
 
   build:
+    silent: true
     deps:
       - scripts:bun-install-types:run
       - c-interop:build
       - scripts:gen-protocol:build
       - print-licenses
+    cmds:
+      # remove the libstdc++ that canvas ships with and use the system one
+      # TODO find a way to do this only when needed
+      # TODO There is probably a better step to put this in rather than build
+      - rm node_modules/canvas/build/Release/libstdc++.so.6 || true
     desc: Build everything need to run term.everything!mmulet.com
 
 
